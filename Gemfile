@@ -57,7 +57,6 @@ group :development do
 end
 
 # Additional gems for AppDev 2
-gem "devise"
 gem "active_link_to"
 gem "awesome_print"
 gem "dotenv"
@@ -66,10 +65,14 @@ gem "htmlbeautifier"
 gem "http"
 gem "table_print"
 gem "simple_form"
+gem "devise"
+gem "pundit"
 gem "ransack"
 gem "strip_attributes"
 gem "validate_url"
-gem "pundit"
+gem "carrierwave"
+gem "cloudinary"
+gem "kaminari"
 
 group :development do
   gem "annotaterb"
@@ -81,15 +84,16 @@ group :development do
 end
 
 group :development, :test do
-  gem "rspec-rails", "~> 7.0.0"
+  gem "rspec-rails", "~> 7.1.1"
   gem "grade_runner", "~> 0.0.13"
 end
 
 group :test do
-  gem "shoulda-matchers", "~> 4.0"
+  gem "shoulda-matchers", "~> 6.4"
   gem "rspec-html-matchers"
+  gem "rails-controller-testing"
   gem "webmock"
   gem "capybara"
-  gem "selenium-webdriver"
+  gem "selenium-webdriver", "~> 4.11.0"
   gem "webdrivers"
 end
